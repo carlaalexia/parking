@@ -26,6 +26,9 @@ public class Client {
     @Column
     private String horaLlegada;
 
+    @Column
+    private String horaSalida;
+
     @ManyToOne
     private Garage garage;
 
@@ -34,12 +37,13 @@ public class Client {
 
 
     public Client(Long id, String nombrePropietario, String apellidoPropietario, String modeloAuto,
-                  String horaLlegada, Garage garage) {
+                  String horaLlegada,String horaSalida, Garage garage) {
         this.id = id;
         this.nombrePropietario = nombrePropietario;
         this.apellidoPropietario = apellidoPropietario;
         this.modeloAuto = modeloAuto;
         this.horaLlegada = horaLlegada;
+        this.horaSalida = horaSalida;
         this.garage = garage;
     }
 
@@ -91,6 +95,13 @@ public class Client {
         this.garage = garage;
     }
 
+    public String getHoraSalida() {
+        return horaSalida;
+    }
+
+    public void setHoraSalida(String horaSalida) {
+        this.horaSalida = horaSalida;
+    }
 
     @Override
     public String toString() {

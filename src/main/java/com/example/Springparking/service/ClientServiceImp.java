@@ -23,7 +23,32 @@ public class ClientServiceImp implements ClientService {
         return client;
     }
 
+    @Override
+    public Client getUserById(Long id) throws Exception {
+        Client client = clienteRepositorio.findById(id).orElseThrow(() -> new Exception("User does not exist"));
+        return client;
+    }
+    @Override
+    public Client updateClient(Client fromClient) throws Exception {
+        Client toClient = getUserById(fromClient.getId());
+        mapClient(fromClient, toClient);
+        return clienteRepositorio.save(toClient);
+    }
 
 
 
+    protected void mapClient(Client from,Client to) {
+        to.setNombrePropietario(from.getNombrePropietario());
+        to.setApellidoPropietario(from.getApellidoPropietario());
+        to.setModeloAuto(from.getModeloAuto());
+        to.setHoraLlegada(from.getHoraLlegada());
+        to.setHoraSalida(from.getHoraSalida());
+    }
+
+    public void deleteClient(Long id) throws Exception {
+        Client client = clienteRepositorio.findById(id)
+                .orElseThrow(() -> new Exception("UsernotFound in deleteUser -"+this.getClass().getName()));
+
+        clienteRepositorio.delete(client);
+    }
 }

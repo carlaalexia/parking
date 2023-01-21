@@ -6,6 +6,14 @@ public interface ClientService {
 
     public Iterable<Client> getAllClients();
 
-    public Client createClient(Client clientForm) throws Exception;
+    public Client createClient(Client client) throws Exception;
+
+    public Client getUserById(Long id) throws Exception;
+
+    public Client updateClient(Client client) throws Exception;
+
+    public void deleteClient(Long id) throws Exception;
+
+
 
 }

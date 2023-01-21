@@ -12,7 +12,7 @@ body{
 }
 .card-body{
     background-color: #d1d3d6;
-    box-shadow: 0px 0px 3px #848484;
+    box-shadow: 0px 0px 5px #848484;
 }
 
 label{

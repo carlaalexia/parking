@@ -10,4 +10,6 @@ public class UserController {
 
     @GetMapping("/usuario")
     public String usuario(){return "usuario";}
+
+
 }

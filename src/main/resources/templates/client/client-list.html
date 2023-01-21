@@ -7,6 +7,7 @@
       <th scope="col">Apellido</th>
       <th scope="col">Modelo del auto</th>
       <th scope="col">Hora de llegada</th>
+      <th scope="col">Hora de Salida</th>
       <th scope="col">Garage</th>
       <th></th>
     </tr>
@@ -17,13 +18,31 @@
       <td th:text="${client.nombrePropietario}"></td>
       <td th:text="${client.apellidoPropietario}"></td>
       <td th:text="${client.modeloAuto}"></td>
-      <td th:text="${client.horaLlegada}">
+      <td th:text="${client.horaLlegada}"></td>
+      <td th:text="${client.horaSalida}"></td>
       <td th:text="${client.garage}"></td>
       <td>
-        <a href="#" th:href="@{${client.id}}"><i class="fas fa-edit"></i></a>
-        | <a href="#" th:onclick="'javascript:confirmDelete(\''+ ${client.id} +'\');'"><i class="fas fa-client-times"></i></a>
+
+
+        <a href="#" th:href="@{'/editClient/'+ ${client.id}}"><i class="fas fa-edit"></i></a>
+        |<a href="#" th:onclick="'javascript:confirmDelete(\''+ ${client.id} +'\');'"><i class="fas fa-user-times"></i></a>
       </td>
     </tr>
     </tbody>
   </table>
+  <div id="deleteError" th:if="${deleteError}" class="alert alert-danger text-center" role="alert">
+    <span th:text="${deleteError}"></span>
+  </div>
+
+<script type="text/javascript">
+function confirmDelete(id){
+	$('#deleteModal').modal('show');
+	$("#clientIdHiddenInput").val(id);
+}
+
+function deleteClient(){
+	var id = $("#clientIdHiddenInput").val();
+    window.location = "deleteClient/"+id;
+}
+</script>
 </div>
