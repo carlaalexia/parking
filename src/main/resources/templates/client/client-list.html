@@ -6,8 +6,8 @@
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
       <th scope="col">Modelo del auto</th>
-      <th scope="col">Garage</th>
       <th scope="col">Hora de llegada</th>
+      <th scope="col">Garage</th>
       <th></th>
     </tr>
     </thead>
@@ -17,8 +17,8 @@
       <td th:text="${client.nombrePropietario}"></td>
       <td th:text="${client.apellidoPropietario}"></td>
       <td th:text="${client.modeloAuto}"></td>
-      <td th:text="${client.garage}"></td>
       <td th:text="${client.horaLlegada}">
+      <td th:text="${client.garage}"></td>
       <td>
         <a href="#" th:href="@{${client.id}}"><i class="fas fa-edit"></i></a>
         | <a href="#" th:onclick="'javascript:confirmDelete(\''+ ${client.id} +'\');'"><i class="fas fa-client-times"></i></a>

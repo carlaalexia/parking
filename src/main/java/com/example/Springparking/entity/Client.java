@@ -1,13 +1,8 @@
 package com.example.Springparking.entity;
 
 
-import jakarta.persistence.*;
-import org.hibernate.annotations.NotFound;
-import org.springframework.lang.NonNull;
+import jakarta.persistence.*;import java.sql.Time;
 
-import javax.validation.constraints.NotBlank;
-import java.sql.Time;
-import java.time.Duration;
 import java.util.Date;
 
 @Entity
@@ -20,21 +15,16 @@ public class Client {
 
 
     @Column
-    @NotBlank
     private String nombrePropietario;
 
     @Column
-    @NotBlank
     private String apellidoPropietario;
 
     @Column
-    @NotBlank
     private String modeloAuto;
 
     @Column
-    @NotBlank
-    @Temporal(TemporalType.TIME)
-    private Time horaLlegada;
+    private String horaLlegada;
 
     @ManyToOne
     private Garage garage;
@@ -44,7 +34,7 @@ public class Client {
 
 
     public Client(Long id, String nombrePropietario, String apellidoPropietario, String modeloAuto,
-                  Time horaLlegada, Garage garage) {
+                  String horaLlegada, Garage garage) {
         this.id = id;
         this.nombrePropietario = nombrePropietario;
         this.apellidoPropietario = apellidoPropietario;
@@ -85,11 +75,11 @@ public class Client {
         this.modeloAuto = modeloAuto;
     }
 
-    public Date getHoraLlegada() {
+    public String getHoraLlegada() {
         return horaLlegada;
     }
 
-    public void setHoraLlegada(Time horaLlegada) {
+    public void setHoraLlegada(String horaLlegada) {
         this.horaLlegada = horaLlegada;
     }
 

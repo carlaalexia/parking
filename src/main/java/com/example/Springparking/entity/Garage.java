@@ -2,13 +2,11 @@ package com.example.Springparking.entity;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 public class Garage {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -19,7 +17,7 @@ public class Garage {
 
     public Garage(Long id, Integer capacidad) {
         this.id = id;
-        this.capacidad = 10;
+        this.capacidad = capacidad;
     }
 
     public Long getId() {
@@ -28,14 +26,6 @@ public class Garage {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Integer getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(Integer capacidad) {
-        this.capacidad = capacidad;
     }
 
     @Override
