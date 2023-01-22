@@ -47,7 +47,7 @@ public class ClientServiceImp implements ClientService {
 
     public void deleteClient(Long id) throws Exception {
         Client client = clienteRepositorio.findById(id)
-                .orElseThrow(() -> new Exception("UsernotFound in deleteUser -"+this.getClass().getName()));
+                .orElseThrow(() -> new Exception("ClientnotFound in deleteClient -"+this.getClass().getName()));
 
         clienteRepositorio.delete(client);
     }

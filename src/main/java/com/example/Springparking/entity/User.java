@@ -38,6 +38,9 @@ public class User {
         this.confirmarContraseña = confirmarContraseña;
     }
 
+    public User(String nombreUsuario, String contraseña) {
+    }
+
     public Long getId() {
         return id;
     }

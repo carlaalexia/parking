@@ -34,15 +34,15 @@
     <span th:text="${deleteError}"></span>
   </div>
 
-<script type="text/javascript">
-function confirmDelete(id){
-	$('#deleteModal').modal('show');
-	$("#clientIdHiddenInput").val(id);
-}
+   <script type="text/javascript">
+       function confirmDelete(id){
+	      $('#deleteModal').modal('show');
+	      $("#clientIdHiddenInput").val(id);
+       }
 
-function deleteClient(){
-	var id = $("#clientIdHiddenInput").val();
-    window.location = "deleteClient/"+id;
-}
-</script>
+       function deleteClient(){
+	      var id = $("#clientIdHiddenInput").val();
+          window.location = "deleteClient/"+id;
+       }
+   </script>
 </div>
