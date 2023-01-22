@@ -2,6 +2,9 @@ package com.example.Springparking.entity;
 
 import jakarta.persistence.*;
 
+import javax.validation.constraints.Size;
+import java.util.Set;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -24,11 +27,12 @@ public class User {
     @Transient
     private String confirmarContraseña;
 
+
     public User() {
     }
 
-    public User(Long id, String nombre, String apellido,
-                String mail, String nombreUsuario, String contraseña, String confirmarContraseña) {
+
+    public User(Long id, String nombre, String apellido, String mail, String nombreUsuario, String contraseña, String confirmarContraseña) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -36,9 +40,6 @@ public class User {
         this.nombreUsuario = nombreUsuario;
         this.contraseña = contraseña;
         this.confirmarContraseña = confirmarContraseña;
-    }
-
-    public User(String nombreUsuario, String contraseña) {
     }
 
     public Long getId() {
@@ -89,7 +90,6 @@ public class User {
         this.contraseña = contraseña;
     }
 
-
     public String getConfirmarContraseña() {
         return confirmarContraseña;
     }
@@ -97,8 +97,6 @@ public class User {
     public void setConfirmarContraseña(String confirmarContraseña) {
         this.confirmarContraseña = confirmarContraseña;
     }
-
-
 
 }
 

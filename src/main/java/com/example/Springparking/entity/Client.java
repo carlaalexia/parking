@@ -1,9 +1,8 @@
 package com.example.Springparking.entity;
 
 
-import jakarta.persistence.*;import java.sql.Time;
+import jakarta.persistence.*;
 
-import java.util.Date;
 
 @Entity
 @Table(name = "clients")
