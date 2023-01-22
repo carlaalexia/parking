@@ -21,7 +21,7 @@ public class WebSecurityConfig {
             "/editUser/{id}", "/editUser", "/userForm/cancel", "/deleteUser/{id}", "/clientForm", "/userForm"
     };
     String[] resources = new String[]{
-            "/insert/**","/css/**","/icons/**","/img/**","/js/**","/layer/**"
+            "/include/**","/css/**","/icons/**","/img/**","/js/**","/layer/**"
     };
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -32,7 +32,6 @@ public class WebSecurityConfig {
                 .requestMatchers(resources).permitAll()
                 .requestMatchers(pages).permitAll()
                 .requestMatchers("/inicio").permitAll()
-                .requestMatchers("/login").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
