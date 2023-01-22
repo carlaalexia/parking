@@ -1,0 +1,52 @@
+    <form class="form" role="form" autocomplete="off"  th:object="${userForm}"
+          th:action="${editMode}?@{/editUser} :@{/userForm}"  method="post"
+          xmlns:th="http://www.w3.org/1999/xhtml">
+        <input class="form-control" type=hidden th:field="${userForm.id}"  th:if="${editMode}">
+
+
+    <div class="form-group row">
+        <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="text" th:field="${userForm.nombre}"placeholder="Ingrese un nombre..." required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-3 col-form-label form-control-label">Apellido</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="text"  th:field="${userForm.apellido}" placeholder="Ingrese un apellido..." required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-3 col-form-label form-control-label">Mail</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="text"  th:field="${userForm.mail}" placeholder="Ingrese mail..." required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-3 col-form-label form-control-label">Nombre de usuario</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="text"  th:field="${userForm.nombreUsuario}" placeholder="Ingrese nombre de usuario..." required >
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-lg-3 col-form-label form-control-label">Contraseña</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="password"  th:field="${userForm.contraseña}" placeholder="Ingrese contraseña..." required >
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-3 col-form-label form-control-label">Confirmar Contraseña</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="password"  th:field="${userForm.confirmarContraseña}" placeholder="Ingrese contraseña..." required>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <div class="col-lg-12 text-center">
+            <a class="btn btn-secondary"  th:href="@{'/userForm/cancel'}">Cancelar</a>
+            <input type="submit" class="btn btn-primary" value="Guardar usuario" th:value="${editMode}?'Guardar cambios':'Guardar Usuario'">
+        </div>
+    </div>
+</form>

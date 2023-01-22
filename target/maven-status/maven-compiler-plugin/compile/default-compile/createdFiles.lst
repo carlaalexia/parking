@@ -1,0 +1,15 @@
+com\example\Springparking\service\ClientService.class
+com\example\Springparking\service\ClientServiceImp.class
+com\example\Springparking\entity\Client.class
+com\example\Springparking\controller\UserController.class
+com\example\Springparking\service\UserServiceImp.class
+com\example\Springparking\repository\GarageRepository.class
+com\example\Springparking\repository\UserRepository.class
+com\example\Springparking\WebSecurityConfig.class
+com\example\Springparking\entity\User.class
+com\example\Springparking\SpringParkingApplication.class
+com\example\Springparking\service\UserService.class
+com\example\Springparking\controller\IndexController.class
+com\example\Springparking\controller\ClientController.class
+com\example\Springparking\repository\ClientRepository.class
+com\example\Springparking\entity\Garage.class
