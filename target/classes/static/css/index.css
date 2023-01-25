@@ -37,6 +37,7 @@ body{
 
 .form-group::before{
     font-family: "Font Awesome\ 5 Free";
+    color: #140d1a;
     position: absolute;
     left: 28px;
     font-size: 22px;
@@ -49,12 +50,27 @@ body{
 
 .form-group#contrasena-group::before{
     content: "\f023";
+
+}
+
+.form-group#contrasena-group{
+color: #faeeca;
+}
+
+.form-group#user-group{
+color: #faeeca;
+}
+
+.form-grupo#iniciar{
+text-align: center;
 }
 
 button{
     width: 60%;
     margin: 5px 0 25px;
+
 }
+
 
 .forgot{
     padding: 5px 0;
@@ -63,3 +79,5 @@ button{
 .forgot a{
     color: white;
 }
+
+

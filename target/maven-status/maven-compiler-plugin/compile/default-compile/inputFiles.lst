@@ -3,6 +3,8 @@ C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example
 C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\entity\Client.java
 C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\repository\UserRepository.java
 C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\service\UserServiceImp.java
+C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\repository\RoleRepository.java
+C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\entity\Rol.java
 C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\service\ClientService.java
 C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\repository\ClientRepository.java
 C:\programacion\Intellij\Spring-parking\Spring-parking\src\main\java\com\example\Springparking\controller\UserController.java

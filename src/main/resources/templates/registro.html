@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <!--JQUERY-->
+  <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+
+  <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <!-- Los iconos tipo Solid de Fontawesome-->
+  <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Nuestro css-->
+  <link rel="stylesheet" type="text/css" href="static/css/registro.css"
+        th:href="@{/css/registro.css}">
+  <!-- DATA TABLE -->
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+</head>
+<body>
+
+<br>
+
+<h1 class="text-center">Regístrate</h1>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+      <div th:if=${param.exito}>
+        <div class="alert alert-info">Se ha registrado exitosamente a
+          la aplicación</div>
+      </div>
+      <br>
+      <br>
+      <form th:action="@{/registro}" method="post" th:object="${usuario}">
+        <div class="form-group">
+          <label class="control-label" for="nombre">Nombre : </label> <input
+                id="nombre" type="text" class="form-control" th:field="*{nombre}"
+                required autofocus="autofocus">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="apellido">Apellido : </label> <input
+                id="apellido" class="form-control" th:field="*{apellido}"
+                required autofocus="autofocus">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="email">Username : </label> <input
+                id="email" type="text" class="form-control" th:field="*{username}"
+                required autofocus="autofocus">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="password">Password : </label> <input
+                type="password" id="password" class="form-control" th:field="*{password}"
+                required autofocus="autofocus">
+        </div>
+
+        <br>
+        <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-success">Registrar</button>
+          <span>Si estas registrado <a th:href="@{/login}">inicia sesión aqui</a></span>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

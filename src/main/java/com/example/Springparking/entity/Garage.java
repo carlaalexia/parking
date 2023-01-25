@@ -3,6 +3,7 @@ package com.example.Springparking.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "garage")
 public class Garage {
 
     @Id

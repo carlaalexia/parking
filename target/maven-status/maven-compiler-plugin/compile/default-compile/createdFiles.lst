@@ -8,6 +8,8 @@ com\example\Springparking\repository\UserRepository.class
 com\example\Springparking\WebSecurityConfig.class
 com\example\Springparking\entity\User.class
 com\example\Springparking\SpringParkingApplication.class
+com\example\Springparking\entity\Rol.class
+com\example\Springparking\repository\RoleRepository.class
 com\example\Springparking\service\UserService.class
 com\example\Springparking\controller\IndexController.class
 com\example\Springparking\controller\ClientController.class
